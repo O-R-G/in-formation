@@ -75,5 +75,5 @@ may therefore deform democracy by turning states towards partisanship.</span>
 
 </div>
 
-<div id="ica"><img src="media/png/logo.png"></div>
+<div id="ica"><img src="media/png/logo-green.png"></div>
 
