@@ -3,8 +3,8 @@ june 6, 2017
 
 --
 
-
-serverdial.js is based on this tutorial for working with the gyroscope:
+in-formation is based on serverdial.js which is based on this tutorial for 
+working with the gyroscope: 
 http://www.asterixcreative.com/blog/mobile-gyroscope-with-javascript-and-quaternions-programming-tutorial-part-1/
 
 there are two ways to model 3d transformations --
