@@ -35,7 +35,6 @@ img {
 	width: 100%;
 }
 
-
 a:link,
 a:visited {
     color: #0000ff;
@@ -83,7 +82,7 @@ ul:first-child {
     text-align: center;
     font-size: 48px;
     line-height: 48px;
-    color: #F00;
+    color: #000;
 }
 
 #ica {
@@ -204,6 +203,35 @@ a.buynow {
     padding-left: 2px;
     padding-right: 10px;
 }
+
+a.red {
+    color: #F00;
+}
+
+a.green {
+    color: #090;
+}
+
+a.blue {
+    color: #00F;
+}
+
+/*
+a.red:hover {
+    color: #FFF;
+    background-color: #F00;
+}
+
+a.green:hover {
+    color: #FFF;
+    background-color: #090;
+}
+
+a.blue:hover {
+    color: #FFF;
+    background-color: #00F;
+}
+*/
 
 /* utility classes */
 
