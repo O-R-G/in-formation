@@ -1,1 +1,6 @@
-- 
++ add open-records-generator
++ resolve localhost virtual hosting (requesting https in .htaccess)
++ add views/object.php
+- add views/films.php views/exhibitions.php views/live.php 
+- logo match o.g. size?
+- add contents to open-records-generator

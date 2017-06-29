@@ -1,11 +1,22 @@
-<div id="in-formation">In formation</div>
 <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
+<div id="in-formation">In formation</div>
+<!-- <div id="in-formation">Cinema</div> -->
+<!-- <div id="in-formation">Exhibitions</div> -->
+<!-- <div id="in-formation">Live</div> -->
 
 <div id="docket">
 
 <p class="sub">
     WEEK 1
 </p>
+
+<!--
+<p class="sub">
+    <a href="">FILMS</a> / 
+    <a href="">SHOWS</a> / 
+    <a href="">LIVE</a>
+</p>
+-->
 
 <p class="item">
     <span class="date">Tuesday 18 July, 6.30 pm</span>
@@ -74,6 +85,3 @@ may therefore deform democracy by turning states towards partisanship.</span>
 </p>
 
 </div>
-
-<div id="ica"><img src="media/png/logo-green.png"></div>
-

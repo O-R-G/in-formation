@@ -5,68 +5,81 @@ use \Michelf\Markdown;
 // 1. split into sections based by '++'
 // 2. trim whitespace
 // 3. convert from markdown to html
-function process_body($b) {
-	$columns = explode("++", $b);
-	foreach($columns as &$b) {
+function process_body($b)
+{
+	$body_parts = explode("++", $b);
+	foreach($body_parts as &$b)
+	{
 		$b = trim($b);
 		$b = Markdown::defaultTransform($b);
 	}
-	return $columns;
+	return $body_parts;
 }
-$objects = $oo->get($uu->id);
-$body = $objects["body"];
-$columns = process_body($body);
+$oarr = $oo->get($uu->id);
+$body = $oarr["body"];
+$body_parts = process_body($body);
 $media = $oo->media($uu->id);
 
-if($show_menu) {
+// header (menu or breadcrumbs)
+
+if($show_menu)
+{
 ?><section id="body" class="hidden"><?
-} else {
+}
+else
+{
 ?><section id="body" class="visible"><?
 }
-	?><div id="breadcrumbs">
+?><div id="breadcrumbs">
 		<ul class="nav-level">
 			<li><?
 				if(!$uu->id)
 				{
-				?> O-R-G is a small software company.<a href="*">*&nbsp;</a><?
+				?>ALL: COLLECTED VOICES<?
 				}
 				else
 				{
-				?><a href="<? echo $host.$a_url; ?>">O-R-G</a><?
+				?><a href="<? echo $host.$a_url; ?>">ALL: COLLECTED VOICES</a><?
 				}
 			?></li>
 			<ul class="nav-level">
-				<span><? echo $name; ?></span>
+				<span><? // echo $name; ?></span>
 			</ul>
 		</ul>
 	</div><?
-for($i = 0; $i < count($columns); $i++)
+
+// body
+
+for($i = 0; $i < count($body_parts); $i++)
 {
 	if($i % 2 == 0)
 	{
 	?><div class="column-container-container"><?
 	}
-	?><div class="column-container"><? 
-		echo $columns[$i];
-		if ($showsubscribe)
-		       require_once("views/subscribe.php");
-		if($i == 0 && $media[0]) {
+	?><div class="column-container"><?                 
+		echo $body_parts[$i];
+		if($i == 0)
+		{
 			$j = 0;
-			// foreach($media as $m) {
-				if ($media[$j]["type"] == "mp4") {
-					// should fix this width in a css class, but in html element for now
-					// add looping to the video tag
-					// autoplay?
-					?><div class="img-container">
-						<video id="img-<? echo $j; ?>" width="100%" controls loop>
-							<source src="<? echo m_url($media[$j]);?>" type="video/mp4">
-						</video>
-					</div><?
-				} else {
-					?><div class="img-container"><img id="img-<? echo $j; ?>" class="fullscreen" src="<? echo m_url($media[$j]);?>"></div><?
-				}
-				$j++;
-			// }
+			foreach($media as $m)
+			{
+                // if media type == mp3 then insert html audio player
+                if ($m[type] == 'mp3') {
+                    // this tag populates in funny way (looks empty in safari inspector)
+                    // check html audio tag ref ** fix **
+                    ?><audio controls class='mp3'>
+                        <source src="<? echo m_url($m); ?>" type="audio/mpeg">
+                         ** Sorry, your browser does not support the audio element. **
+                    </audio><?
+                } else {
+                    // otherwise, display img 
+                    ?><div><img src="<? echo m_url($m);?>" class="fullscreen"></div><?
+                }
+                // caption
+                if ($m[caption]) 
+                    ?><div class='caption'><? echo $m[caption]; ?></div><?   
+            } 
+		    $j++;
 		}
 	?></div><?
 	if($i % 2 == 1)
@@ -75,21 +88,22 @@ for($i = 0; $i < count($columns); $i++)
 	}
 } 
 ?></section>
-<script type="text/javascript" src="<? 
-echo $host; ?>static/js/screenfull.js"></script>	
+
+<script type="text/javascript" src="<? echo $host; ?>static/js/screenfull.js"></script>	
 <script>
-	var fullscreens = document.getElementsByClassName('fullscreen');
-	for (var i = 0; i < fullscreens.length; i++) {
-    		( function () {
-        		// ( closure ) -- retains state of local variables
-        		// by making capturing context, here using j
-        		// + listener wrapped in function to pass variable		
-			var fullscreen = fullscreens[i];
-        		fullscreen.addEventListener('click', function() {
-					if (screenfull.enabled) {
-						screenfull.toggle(fullscreen);
-					}
-        		});
-    		})();
+	var imgs = document.getElementsByClassName('fullscreen');
+	var i;
+	var index;
+	for (i = 0; i < imgs.length; i++)
+	{
+		imgs[i].addEventListener('click', function () 
+		{
+			if (screenfull.enabled) {
+				screenfull.toggle(this);
+			}
+			index = i;
+			console.log(index);
+		}, false);
 	}
 </script>
+
