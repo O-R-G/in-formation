@@ -64,11 +64,12 @@ $media = $oo->media($uu->id);
 </div>
     
 <div id="controls"> 
-
-    <div id="control" onclick="javascript: rotate_menu();">
-        rotate_menu();
+    <div id="control" onclick="javascript: next_rotate();">
+        next_rotate();
     </div>
-
+    <div id="control" onclick="javascript: update_cube(120);">
+        update_cube(120);
+    </div>
 </div>
 
 
