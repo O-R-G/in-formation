@@ -3,4 +3,28 @@
 + add views/object.php
 - add views/films.php views/exhibitions.php views/live.php 
 - logo match o.g. size?
-- add contents to open-records-generator
++ add contents to open-records-generator
+- cube (2 ways)
+
+  cube.js
+    A.  switch .f1 => .f2
+    B.  update .f1, .f2, .f3, .f4, .f5, .f6 css transformations
+        function update(x,y,z)
+        maintains state
+        use gyro serverdial logic to feed update
+        
+  cube.css
+    A.  #cube div  transition: transform 1s;
+        #cube .f1  rotateY(0deg);
+        #cube .f2  rotateY(90deg);
+    B.  #cube div  transition: transform 1s;
+        #cube .f1  rotateY(0deg);
+        #cube .f2  rotateY(90deg);
+        #cube .f3  rotateY(180deg);
+        #cube .f4  rotateY(270deg);
+        #cube .f5  rotateX(90deg);
+        #cube .f6  rotateX(-90deg);
+
+- gyroscope logo
+    uses serverdial logic to change positions of r, g, b logos to equal white
+    or logic from o-r-g clock
