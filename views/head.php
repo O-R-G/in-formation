@@ -33,4 +33,6 @@ $title = "in-formation";
         <script src="static/js/cube.js"></script>
 	</head>
 	<body>
-        <div id="in-formation">Institute of Contemporary Arts</div>
+        <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
+        <!-- <div id="in-formation">In Formation</div> -->
+        <div id="in-formation">Dev</div>
