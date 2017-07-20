@@ -14,6 +14,7 @@ $media = $oo->media($uu->id);
 
         $root = 0;
         $children = $oo->children($root);
+        $roots = $oo->children_ids($root);
         $count = 0;
         foreach($children as $child) {
             $name =  $child["name1"];
@@ -24,77 +25,42 @@ $media = $oo->media($uu->id);
             ?><a href="<? echo $url; ?>" class="<? echo $class; ?>"><? echo $name; ?></a> <?
             $count++;
         }
-
+            
+        $count = 0;
     ?></p>
     
     <!-- menu-cube -->
 
-    <div id="menu-cube">
+    <div id="menu-cube"><?
+            
+        foreach($roots as $root) {
+    
+            ?><div class="f<? echo $count+1; ?> docket-items"><?
 
-        <!-- f1 -->
-        <div class="f1">
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-            <p class='red'>** hello world! **</p>
-        </div>
+                $children = $oo->children($root);
+                if ($count == 0) $class = "red";
+                if ($count == 1) $class = "green";
+                if ($count == 2) $class = "blue";
 
-        <!-- f1 
-        <div class="f1"><?
+                foreach($children as $child) {
+                    $date =  $child["begin"];
+                    $location = $child["notes"];
+                    $title = $child["name1"];
+                    $description = $child["deck"];
+                    $url = $child["url"];
 
-            // items
-            $root = $uu->id;
-            $children = $oo->children($root);
+                    ?><p class="item"><?
+                        ?><span class="date"><? echo $date; ?></span><?
+                        ?><span class="location"><? echo $location; ?></span><?
+                        ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $class; ?>"><? echo $title; ?></a></span><?
+                        ?><span class="description"><? echo $description; ?></span><?
+                    ?></p><?
+                }
+                $count++;
+            ?></div><?
+        }
 
-            foreach($children as $child) {
-                $date =  $child["begin"];
-                $location = $child["notes"];
-                $title = $child["name1"];
-                $description = $child["deck"];
-                $url = $child["url"];
-
-                ?><p class="item"><?
-                    ?><span class="date"><? echo $date; ?></span><?
-                    ?><span class="location"><? echo $location; ?></span><?
-                    ?><span class="title"><a href="<? echo "shows/" . $url; ?>"><? echo $title; ?></a></span><?
-                    ?><span class="description"><? echo $description; ?></span><?
-                ?></p><?
-            }
-        ?></div>
-        -->
-
-        <!-- f2 -->
-        <div class="f2">
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-            <p class='green'>** goodbye world! **</p>
-        </div>
-
-        <!-- f3 -->
-        <div class="f3">
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-            <p class='blue'>** ciao world! **</p>
-        </div>
-
-    </div>
+    ?></div>
 </div>
     
 <div id="controls"> 
@@ -112,37 +78,6 @@ $media = $oo->media($uu->id);
 
        
 
-
-
-
-
-    <!-- f1 
-
-    <div class="f1 docket-items"><?
-
-        // items
-
-        $root = $uu->id;
-        $children = $oo->children($root);
-
-        foreach($children as $child) {
-            $date =  $child["begin"];
-            $location = $child["notes"];
-            $title = $child["name1"];
-            $description = $child["deck"];
-            $url = $child["url"];
-
-            ?><p class="item"><?
-                ?><span class="date"><? echo $date; ?></span><?
-                ?><span class="location"><? echo $location; ?></span><?
-                ?><span class="title"><a href="<? echo "shows/" . $url; ?>"><? echo $title; ?></a></span><?
-                ?><span class="description"><? echo $description; ?></span><?
-            ?></p><?
-        }
-    ?></div>
-
-        
-    -->
 
 
 
