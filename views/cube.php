@@ -31,17 +31,16 @@ $media = $oo->media($uu->id);
 
     <div id="menu-cube">
 
+        <!-- f1 -->
         <div class="f1">
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
-            <p>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
+            <p class='red'>** hello world! **</p>
         </div>
 
         <!-- f1 
@@ -70,16 +69,31 @@ $media = $oo->media($uu->id);
 
         <!-- f2 -->
         <div class="f2">
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
-            <p>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
+            <p class='green'>** goodbye world! **</p>
         </div>
+
+        <!-- f3 -->
+        <div class="f3">
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+            <p class='blue'>** ciao world! **</p>
+        </div>
+
     </div>
 </div>
     

@@ -27,7 +27,8 @@
 }
 
 .f1,
-.f2 {
+.f2, 
+.f3 {
     cursor: pointer;
 }
 
@@ -37,16 +38,16 @@
 
 #menu-cube .f2 {
     transform: rotateY(90deg);
-    position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 #menu-cube .f3 { 
-    transform: rotateY(90deg); 
+    transform: rotateY(-90deg); 
 }
 
 #menu-cube div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     transition: transform 1s;
 }
 
@@ -61,11 +62,16 @@
     top: 10px;
     left: 10px;
     padding: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
 }
 
 #control {
     display: inline-block;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: #FFF;
     background-color: #999;
     border-radius: 10px;
