@@ -26,11 +26,11 @@ $media = $oo->media($uu->id);
         }
 
     ?></p>
-
+    
     <!-- menu-cube -->
 
     <div id="menu-cube">
-    
+
         <div class="f1">
             <p>** hello world! **</p>
             <p>** hello world! **</p>
@@ -80,15 +80,21 @@ $media = $oo->media($uu->id);
             <p>** goodbye world! **</p>
             <p>** goodbye world! **</p>
         </div>
-
     </div>
-
-
 </div>
     
-<div id="cube-rotate-control" onclick="javascript: rotate_menu();">
-    rotate_menu();
-<div>
+<div id="controls"> 
+
+    <div id="control" onclick="javascript: rotate_menu();">
+        rotate_menu();
+    </div>
+
+    <div id="control" onclick="javascript: change_color();">
+        change_color();
+    </div>
+
+</div>
+
 
        
 

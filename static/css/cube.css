@@ -56,18 +56,22 @@
 
 /* debug */
 
-#cube-rotate-control {
+#controls {
     position: fixed;
     top: 10px;
     left: 10px;
+    padding: 5px;
+}
+
+#control {
+    display: inline-block;
     padding: 10px;
-    /* border: 1px #F00 solid; */
-    border-radius: 10px;
     color: #FFF;
     background-color: #999;
+    border-radius: 10px;
 }   
 
-#cube-rotate-control:hover {
+#control:hover {
     background-color: #666;
 }
 
