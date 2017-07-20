@@ -69,10 +69,6 @@ $media = $oo->media($uu->id);
         rotate_menu();
     </div>
 
-    <div id="control" onclick="javascript: change_color();">
-        change_color();
-    </div>
-
 </div>
 
 
