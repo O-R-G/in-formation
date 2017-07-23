@@ -21,8 +21,11 @@
         #cube .f4  rotateY(270deg);
         #cube .f5  rotateX(90deg);
         #cube .f6  rotateX(-90deg);
-- clean up update_cube(degrees) w/ array and loop
-- cube offset geometry
++ clean up update_cube(degrees) w/ array and loop
+x cube offset geometry
++ simplify cube logic
+  https://paulrhayes.com/animated-css3-cube-interface-using-3d-transforms/
+- add eventlistener to update degrees dynamically
 - connect cube to gyroscope
 - gyroscope logo
     uses serverdial logic to change positions of r, g, b logos to equal white
