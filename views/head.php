@@ -30,7 +30,6 @@ $title = "in-formation";
         <link rel="stylesheet" href="static/css/cube.css">
         <link rel="stylesheet" href="static/fonts/cmun-serif/cmun-serif.css">
 		<link rel="apple-touch-icon" href="/media/png/touchicon.png" />
-        <script src="static/js/cube.js"></script>
 	</head>
 	<body>
         <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->

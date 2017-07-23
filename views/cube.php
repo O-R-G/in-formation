@@ -65,13 +65,23 @@ $media = $oo->media($uu->id);
 
 </div>
     
-<!--
 <div id="controls">
-    <div id="control" onclick="javascript: rotate_left(90);">
-        rotate_left();
-    </div>
-    <div id="control" onclick="javascript: rotate_right(90);">
-        rotate_right();
+    <button id="control">
+        rotate
     </div>
 </div>
+
+
+<!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
+    
+<script src="static/js/cube.js"></script>
+
+<!-- from serverdial.php 
+<script>
+    // (...) is a self-invoking function
+    ( function () {
+        init();
+        initMessage("status-source","status-display",true,40);
+    } )();
+</script>
 -->
