@@ -1,0 +1,77 @@
+#experiment {  
+    perspective: 1600px;
+    perspective-origin: 50% 200px;
+}
+
+#cube {
+  position: relative;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+#cube .one  {
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+#cube .two {
+    transform: translateZ(200px);
+}
+
+#cube .three {
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+#cube .four {
+    transform: rotateY(180deg) translateZ(200px);
+}
+
+#cube .five {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+
+#cube .six {
+    transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+}
+
+.face {
+  position: absolute;
+  height: 800px;
+  width: 380px;
+  padding: 20px;
+  background-color: rgba(190, 190, 190, 0.7);
+}
+
+
+
+
+/* debug */
+
+#controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#control {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #FFF;
+    background-color: #999;
+    border-radius: 10px;
+}   
+
+#control:hover {
+    background-color: #666;
+}
+
+
+

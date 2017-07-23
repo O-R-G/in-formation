@@ -70,6 +70,9 @@ $media = $oo->media($uu->id);
     <div id="control" onclick="javascript: update_cube(120);">
         update_cube(120);
     </div>
+    <div id="control" onclick="javascript: readCube(cube);">
+        readCube(cube);
+    </div>
 </div>
 
 
