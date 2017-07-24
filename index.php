@@ -2,7 +2,7 @@
 $uri = explode('/', $_SERVER['REQUEST_URI']);
 $view = "views/";
 
-if ($uri[1] == "cube") 
+if ($uri[1] == "cube" || $uri[2] == "cube") 
     $view .= "cube.php";
 else 
     $view .= "docket.php";
