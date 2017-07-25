@@ -25,8 +25,8 @@
 x cube offset geometry
 + simplify cube logic
   https://paulrhayes.com/animated-css3-cube-interface-using-3d-transforms/
-- add eventlistener to update degrees dynamically
-- connect cube to gyroscope
++ add eventlistener to update degrees dynamically
++ connect cube to gyroscope
 - gyroscope logo
     uses serverdial logic to change positions of r, g, b logos to equal white
     or logic from o-r-g clock
