@@ -106,13 +106,13 @@ mix-blend-mode: saturation;
 mix-blend-mode: color;
 mix-blend-mode: luminosity;
     */
-mix-blend-mode: overlay;
+mix-blend-mode: screen;
 }
 
 #ica .r {
     position: fixed;
     bottom: 20px;
-    right: 16px;
+    right: 14px;
     width: 140px;
 }
 
@@ -126,7 +126,7 @@ mix-blend-mode: overlay;
 #ica .b {
     position: fixed;
     bottom: 20px;
-    right: 24px;
+    right: 26px;
     width: 140px;
 }
 
