@@ -11,7 +11,7 @@ $media = $oo->media($uu->id);
         // build selectors
 
         $root = 0;
-        $head = array();
+        $category = array();
         $children = $oo->children($root);
         $roots = $oo->children_ids($root);
         $count = 0;
@@ -21,8 +21,8 @@ $media = $oo->media($uu->id);
             if ($count == 0) $class = "red";
             if ($count == 1) $class = "green";
             if ($count == 2) $class = "blue";
-            $html = "<div class='head'><a href='" . $url . "' class='" . $class . "'>" . $name . "</a></div>"; 
-            array_push($head, $html);
+            $html = "<div class='sub'><a href='" . $url . "' class='" . $class . "'>" . $name . "</a></div>"; 
+            array_push($category, $html);
             $count++;
         }
         $count = 0;
@@ -40,7 +40,7 @@ $media = $oo->media($uu->id);
                     if ($count == 0) $class = "red";
                     if ($count == 1) $class = "green";
                     if ($count == 2) $class = "blue";        
-                    echo $head[$count];
+                    echo $category[$count];
 
                     foreach($children as $child) {
                         $date =  $child["begin"];
@@ -50,6 +50,7 @@ $media = $oo->media($uu->id);
                         $url = $child["url"];
 
                         ?><p class="item"><?
+                            $date = date('l d/m', strtotime($date) );  
                             ?><span class="date"><? echo $date; ?></span><?
                             ?><span class="location"><? echo $location; ?></span><?
                             ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $class; ?>"><? echo $title; ?></a></span><?

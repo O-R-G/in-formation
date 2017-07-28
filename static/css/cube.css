@@ -2,28 +2,30 @@
 
 /* id */
 
-#viewport {  
-    background-color: #FF0;
-    opacity:0.75;
+#viewport {
+    text-align: center;
 }
 
 #cube {
     position: relative;
     white-space: nowrap;
-    text-align: center;
 }
 
 #cube div {
     display: inline-block;
-    width: 400px;
+    width: 350px;
+    /* width: 33%; */
     vertical-align: top;
     white-space: initial;
-    background-color: #FFF;
     text-align: initial;
 }
 
 #cube .head {
     text-align: center;   
+}
+
+#cube .sub {
+    width: initial;
 }
 
 #cube .f1 {
@@ -64,10 +66,8 @@
 /* class */
 
 .face {
-  position: relative;
-  padding: 20px;
-  background-color: rgba(200, 200, 200, 0.5);
-  opacity: 0.5;                                 /* dev */
+    position: relative;
+    padding: 20px;
 }
 
 
@@ -89,10 +89,10 @@
     }
 
     #cube {  
-        height: 400px;
-        width: 400px;
+        width:300px; 
         margin: 0 auto;
-        transition: transform 0.25s;
+        text-align: left;
+        transition: transform 0.1s;
         transform-style: preserve-3d;
     }
 
@@ -110,13 +110,15 @@
 
     .face {
         position: absolute;
+        width: 350px;
         height: 800px;
-        width: 400px;
         padding: 20px;
-        background-color: rgba(200, 200, 200, 1.0);
-        opacity: 0.5;                                 /* dev */
+        background-color: #CCC;
     }
 
+    #in-formation {
+        display: none;
+    }
 }
 
 

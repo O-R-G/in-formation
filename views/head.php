@@ -32,7 +32,7 @@ $title = "in-formation";
 		<link rel="apple-touch-icon" href="/media/png/touchicon.png" />
 	</head>
 	<body>
-        <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
+        <div id="in-formation">Institute of Contemporary Arts</div>
         <!-- <div id="in-formation">In Formation</div> -->
         <!-- <div id="in-formation">Dev</div> -->
         <!-- <div id="in-formation">Exhibitions</div> -->

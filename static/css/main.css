@@ -72,17 +72,11 @@ ul:first-child {
 /* ids */
 
 #in-formation {
-    /* 
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    */
-    margin-top: 20px;   
+    margin-top: 40px;   
     margin-bottom: 20px;   
     text-align: center;
     font-size: 48px;
     line-height: 48px;
-    /* color: #000; */
 }
 
 #ica {
@@ -199,6 +193,7 @@ mix-blend-mode: overlay;
 
 .sub {
     text-transform: uppercase;
+    padding-bottom: 1em;
 }
 
 .item {
