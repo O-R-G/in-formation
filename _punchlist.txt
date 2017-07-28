@@ -30,3 +30,4 @@ x cube offset geometry
 - gyroscope logo
     uses serverdial logic to change positions of r, g, b logos to equal white
     or logic from o-r-g clock
+- rotate on center axis? make another url like /axis to try it

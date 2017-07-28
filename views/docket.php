@@ -6,79 +6,82 @@ $body = Markdown::defaultTransform($o["body"]);
 $media = $oo->media($uu->id);
 ?>
 
-<div id="docket">
+<div id="docket"><?
 
-    <p class="sub"><?
-
-        // selector
+        // build selectors
 
         $root = 0;
+        $head = array();
         $children = $oo->children($root);
-    $count = 0;
+        $roots = $oo->children_ids($root);
+        $count = 0;
         foreach($children as $child) {
             $name =  $child["name1"];
             $url = $child["url"];
             if ($count == 0) $class = "red";
             if ($count == 1) $class = "green";
             if ($count == 2) $class = "blue";
-            ?><a href="<? echo $url; ?>" class="<? echo $class; ?>"><? echo $name; ?></a> <?
+            $html = "<div class='head'><a href='" . $url . "' class='" . $class . "'>" . $name . "</a></div>"; 
+            array_push($head, $html);
             $count++;
         }
+        $count = 0;
 
-    ?></p>
+    ?><!-- cube -->
 
-    <div class="docket-items"><?
+    <div id="viewport">
+        <div id="cube"><?
+                
+            foreach($roots as $root) {
+    
+                ?><div class="face f<? echo $count+1; ?> docket-items"><?
 
-        // items
+                    $children = $oo->children($root);
+                    if ($count == 0) $class = "red";
+                    if ($count == 1) $class = "green";
+                    if ($count == 2) $class = "blue";        
+                    echo $head[$count];
 
-        $root = $uu->id;
-        $children = $oo->children($root);
+                    foreach($children as $child) {
+                        $date =  $child["begin"];
+                        $location = $child["notes"];
+                        $title = $child["name1"];
+                        $description = $child["deck"];
+                        $url = $child["url"];
 
-        foreach($children as $child) {
-            $date =  $child["begin"];
-            $location = $child["notes"];
-            $title = $child["name1"];
-            $description = $child["deck"];
-            $url = $child["url"];
-
-            ?><p class="item"><?
-                ?><span class="date"><? echo $date; ?></span><?
-                ?><span class="location"><? echo $location; ?></span><?
-                ?><span class="title"><a href="<? echo "shows/" . $url; ?>"><? echo $title; ?></a></span><?
-                ?><span class="description"><? echo $description; ?></span><?
-            ?></p><?
-        }
-    ?></div>
-
-<?
-/*   
-// reference 
-
-    public static function get_all( $fields = array("*"),
-                                    $tables = array("objects"),
-                                    $where = array(),
-                                    $order = array(),
-                                    $limit = '',
-                                    $descending = FALSE,
-                                    $distinct = TRUE)
-
-    // return the children of object with id $o
-    public function children($o)
-    {
-        $fields = array("objects.*");
-        $tables = array("objects", "wires");
-        $where  = array("wires.fromid = '".$o."'",
-                        "wires.active = 1",
-                        "wires.toid = objects.id",
-                        "objects.active = '1'");
-        $order  = array("objects.rank", "objects.begin", "objects.end", "objects.name1");
-
-        return $this->get_all($fields, $tables, $where, $order);
-    }
-
-
-*/
-?>
+                        ?><p class="item"><?
+                            ?><span class="date"><? echo $date; ?></span><?
+                            ?><span class="location"><? echo $location; ?></span><?
+                            ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $class; ?>"><? echo $title; ?></a></span><?
+                            ?><span class="description"><? echo $description; ?></span><?
+                        ?></p><?
+                    }
+                    $count++;
+                ?></div><?
+            }
+        ?></div>
+    </div>
 
 </div>
+   
+<!-- 
+<div id="controls">
+    <button id="control">
+        rotate
+    </div>
+</div>
+-->
 
+<!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
+    
+<script src="static/js/cube.js"></script>
+
+<!-- from serverdial.php 
+<script>
+    // (...) is a self-invoking function
+    ( function () {
+        init();
+        initMessage("status-source","status-display",true,40);
+    } )();
+</script>
+-->

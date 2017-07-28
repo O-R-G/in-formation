@@ -1,45 +1,39 @@
 /* https://paulrhayes.com/animated-css3-cube-interface-using-3d-transforms/ */
 
-#camera {  
-    perspective: 1600px;
-    perspective-origin: 50% 200px;
+/* id */
+
+#viewport {  
+    background-color: #FF0;
+    opacity:0.75;
 }
 
 #cube {
-  position: relative;
-  margin: 0 auto;
-  height: 400px;
-  width: 400px;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#cube div {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    white-space: initial;
+    background-color: #FFF;
+    text-align: initial;
+}
+
+#cube .head {
+    text-align: center;   
 }
 
 #cube .f1 {
-    transform: translateZ(200px);
 }
 
 #cube .f2 {
-    transform: rotateY(90deg) translateZ(200px);
 }
 
 #cube .f3 {
-    transform: rotateY(-90deg) translateZ(200px);
 }
-
-.face {
-  position: absolute;
-  height: 800px;
-  width: 400px;
-  padding: 20px;
-  background-color: rgba(200, 200, 200, 1.0);
-}
-
-
-
-
-
-
-/* debug */
 
 #controls {
     position: fixed;
@@ -67,4 +61,65 @@
 }
 
 
+/* class */
+
+.face {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(200, 200, 200, 0.5);
+  opacity: 0.5;                                 /* dev */
+}
+
+
+
+/* mobile */
+
+/* vertical iPad / horizontal iPhone */
+@media screen and (max-width: 768px) {
+
+}
+
+/* vertical iPhone */
+@media screen and (max-width: 500px) {
+
+    #viewport {
+        margin: 0;
+        perspective: 3600px;
+        perspective-origin: 50% 200px;
+    }
+
+    #cube {  
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        transition: transform 0.25s;
+        transform-style: preserve-3d;
+    }
+
+    #cube .f1 {
+        transform: translateZ(200px);
+    }
+
+    #cube .f2 {
+        transform: rotateY(90deg) translateZ(200px);
+    }
+
+    #cube .f3 {
+        transform: rotateY(-90deg) translateZ(200px);
+    }
+
+    .face {
+        position: absolute;
+        height: 800px;
+        width: 400px;
+        padding: 20px;
+        background-color: rgba(200, 200, 200, 1.0);
+        opacity: 0.5;                                 /* dev */
+    }
+
+}
+
+
+
+/* animation */
 
