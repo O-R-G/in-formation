@@ -1,0 +1,70 @@
+/* dynamic gyroscope logo */
+
+/* id */
+
+body {
+    background-color: #000;
+}
+
+#logo {       
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    width: 200px;
+}
+
+#logo div {
+    position: absolute;
+    /*
+    mix-blend-mode: normal;
+    mix-blend-mode: multiply;
+    mix-blend-mode: screen;
+    mix-blend-mode: overlay;
+    mix-blend-mode: darken;
+    mix-blend-mode: lighten;
+    mix-blend-mode: color-dodge;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;
+    mix-blend-mode: soft-light;
+    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
+    mix-blend-mode: hue;
+    mix-blend-mode: saturation;
+    mix-blend-mode: color;
+    mix-blend-mode: luminosity;
+    */
+    mix-blend-mode: screen;
+}
+
+#logo #logo-r {
+    left: 10px;
+}
+
+#logo #logo-g {
+    left: 20px;
+}
+
+#logo #logo-b {
+    left: 30px;
+}
+
+#in-formation {
+    display: none;
+}
+
+/* class */
+
+
+/* mobile */
+
+/* vertical iPad / horizontal iPhone */
+@media screen and (max-width: 768px) {
+}
+
+/* vertical iPhone */
+@media screen and (max-width: 500px) {
+}
+
+
+/* animation */
+

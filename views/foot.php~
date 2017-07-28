@@ -1,0 +1,7 @@
+        <div id="ica"><a href="/"><img src="media/png/logo-white.png"></a></div>
+	</body>
+    
+    <!-- use onload logic here ! ** fix **  -->    
+    <script src="static/js/cube.js"></script>
+
+</html>
