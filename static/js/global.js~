@@ -79,7 +79,6 @@ function checkCookie(name)
 // event listener (logo)
 
 var ica = document.getElementById('ica');
-
 ica.addEventListener("click", function(e) {
     var docket = document.getElementById('docket');
     var menu = document.getElementById('docket');

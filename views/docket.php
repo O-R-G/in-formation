@@ -10,7 +10,7 @@ $media = $oo->media($uu->id);
 
         // build selectors
 
-        $root = 0;
+        $root = 15;     // docket id
         $category = array();
         $children = $oo->children($root);
         $roots = $oo->children_ids($root);
