@@ -225,7 +225,7 @@ ul:first-child {
 }
 
 .green {
-    color: #090;
+    color: #0C0;
 }
 
 .blue {
@@ -237,7 +237,7 @@ a.red {
 }
 
 a.green {
-    color: #090;
+    color: #0C0;
 }
 
 a.blue {
@@ -259,7 +259,7 @@ a.red:hover {
 
 a.green:hover {
     color: #FFF;
-    background-color: #090;
+    background-color: #0C0;
 }
 
 a.blue:hover {
