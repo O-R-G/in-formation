@@ -1,8 +1,8 @@
 + add open-records-generator
 + resolve localhost virtual hosting (requesting https in .htaccess)
 + add views/object.php
-/ add views/films.php views/exhibitions.php views/live.php 
-/ logo match o.g. size?
+x add views/films.php views/exhibitions.php views/live.php 
+x logo match o.g. size?
 + add contents to open-records-generator
 + cube.js
     A.  switch .f1 => .f2
@@ -27,7 +27,12 @@ x cube offset geometry
   https://paulrhayes.com/animated-css3-cube-interface-using-3d-transforms/
 + add eventlistener to update degrees dynamically
 + connect cube to gyroscope
-- gyroscope logo
++ gyroscope logo
     uses serverdial logic to change positions of r, g, b logos to equal white
     or logic from o-r-g clock
-- rotate on center axis? make another url like /axis to try it
+x rotate on center axis? make another url like /axis to try it
++ add images to docket
++ add touch event (swipe left, right) to cube
+- add menu clickhandler and display
+- add in formation contents
+- /logo isolate blending

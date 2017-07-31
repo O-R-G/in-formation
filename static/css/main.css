@@ -31,6 +31,11 @@ p {
 	margin-top: 0px;
 }
 
+.mono {
+    font-family: 'OCRB', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace; 
+	font-size: 13px;
+}
+
 img {
 	width: 100%;
 }
@@ -200,7 +205,6 @@ mix-blend-mode: screen;
 
 .date {
     display: inline-block;
-    font-style: italic;
 }
 
 .location {
@@ -224,7 +228,7 @@ mix-blend-mode: screen;
 }
 
 .img-container {
-	padding-bottom: 15px;
+    padding: 0 12% 1em 0;
 }
 
 .column-container-container {
@@ -240,11 +244,16 @@ mix-blend-mode: screen;
 	padding: 20px;
 }
 
-a.buynow {
-    color:#FFFFFF;
-    background-color:#0000ff;
-    padding-left: 2px;
-    padding-right: 10px;
+.red {
+    color: #F00;
+}
+
+.green {
+    color: #090;
+}
+
+.blue {
+    color: #00F;
 }
 
 a.red {
@@ -259,16 +268,11 @@ a.blue {
     color: #00F;
 }
 
-.red {
-    color: #F00;
-}
-
-.green {
-    color: #090;
-}
-
-.blue {
-    color: #00F;
+a.buynow {
+    color:#FFFFFF;
+    background-color:#0000ff;
+    padding-left: 2px;
+    padding-right: 10px;
 }
 
 /*

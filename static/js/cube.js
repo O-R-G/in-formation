@@ -3,6 +3,7 @@
 var xAngle = 0, yAngle = 0;
 var cube = document.getElementById('cube');
 var alpha, beta, gamma;     // gyrscope x, y, z (z is like y on iphone, points straight up)
+var touchx;
 
 // event listeners
 
@@ -16,7 +17,7 @@ window.addEventListener("deviceorientation", function(e) {
     gamma = 0 - e.gamma * gain;
     // device_orientation_handler_xyz(alpha, beta, gamma);
     // device_orientation_handler_xyz(0, gamma, 0);
-    device_orientation_handler_limit(gamma);
+    // device_orientation_handler_limit(gamma);
 }, false);
 
 document.addEventListener('keydown', function(e) {
@@ -45,6 +46,22 @@ if (thiscontrol = document.getElementById('control')) {
     }, false);
 }
 
+window.addEventListener("touchstart", function(e) {        
+    touchx = e.touches[0].clientX;                                      
+}, false);
+
+window.addEventListener("touchmove", function(e) {
+    if (!touchx) return;
+    var touchx_up = e.touches[0].clientX;                                    
+    var touchx_diff = touchx - touchx_up;
+    if ( touchx_diff > 50 )
+        yAngle -= 90;
+    else
+        yAngle += 90;
+    document.getElementById('cube').style.transform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+    touchx = null;
+}, true);
+
 // display
 
 function device_orientation_handler(tilt) {
@@ -70,4 +87,3 @@ function device_orientation_handler_limit(gamma) {
         yAngle = 0;
     cube.style.transform = " rotateY("+ yAngle + "deg)";
 }
-

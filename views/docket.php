@@ -37,26 +37,35 @@ $media = $oo->media($uu->id);
                 ?><div class="face f<? echo $count+1; ?> docket-items"><?
 
                     $children = $oo->children($root);
-                    if ($count == 0) $class = "red";
-                    if ($count == 1) $class = "green";
-                    if ($count == 2) $class = "blue";        
+                    if ($count == 0) $color = "red";
+                    if ($count == 1) $color = "green";
+                    if ($count == 2) $color = "blue";        
                     echo $category[$count];
 
                     foreach($children as $child) {
                         $date =  $child["begin"];
                         $location = $child["notes"];
                         $title = $child["name1"];
-                        $description = $child["deck"];
+                        $description = $child["deck"];    
                         $url = $child["url"];
+                        $media = $oo->media($child["id"]);
 
                         ?><p class="item"><?
-                            $date = date('l d/m', strtotime($date) );  
-                            ?><span class="date"><? echo $date; ?></span><?
+                            // $date = date('l d/m', strtotime($date) );
+                            $date = date('d/m h:i A', strtotime($date) );
+                            ?><span class="date mono <? echo $color; ?>"><? echo $date; ?></span><?
                             ?><span class="location"><? echo $location; ?></span><?
-                            ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $class; ?>"><? echo $title; ?></a></span><?
+                            ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $color; ?>"><? echo $title; ?></a></span><?
                             ?><span class="description"><? echo $description; ?></span><?
                         ?></p><?
-                    }
+            
+                        if (($media) && ($media[0][type] == 'gif')) {
+                                ?><div class='img-container'><img src="<? echo m_url($media[0]);?>" class="fullscreen"></div><?
+                            if ($m[caption]) {
+                                ?><div class='caption'><? echo $m[caption]; ?></div><?
+                            }
+                        }
+                    }   
                     $count++;
                 ?></div><?
             }

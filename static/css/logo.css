@@ -3,14 +3,15 @@
 /* id */
 
 body {
-    background-color: #000;
+     /* background-color: #000; */
 }
 
 #logo {       
     position: relative;
-    margin: 0 auto;
     top: 200px;
-    width: 200px;
+    left: 25%;
+    width: 100%;
+    text-align: center;
 }
 
 #logo div {
@@ -34,18 +35,33 @@ body {
     mix-blend-mode: luminosity;
     */
     mix-blend-mode: screen;
+    width: 50%;
 }
 
+/*
 #logo #logo-r {
-    left: 10px;
+    left: -10px;
 }
 
 #logo #logo-g {
-    left: 20px;
+    left: 0px;
 }
 
 #logo #logo-b {
-    left: 30px;
+    left: 10px;
+}
+*/
+
+#logo-r {
+    left: -10px;
+}
+
+#logo-g {
+    left: 0px;
+}
+
+#logo-b {
+    left: 10px;
 }
 
 #in-formation {

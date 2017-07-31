@@ -24,9 +24,10 @@ window.addEventListener("deviceorientation", function(e) {
     // device_orientation_handler_xyz(alpha, beta, gamma);
     // device_orientation_handler_xyz(0, gamma, 0);
     // device_orientation_handler_limit(gamma);
-    device_orientation_handler_logo_r(alpha);
-    device_orientation_handler_logo_g(beta);
-    device_orientation_handler_logo_b(gamma);
+    // device_orientation_handler_logo_r(alpha);
+    // device_orientation_handler_logo_g(beta);
+    // device_orientation_handler_logo_b(gamma);
+    device_orientation_handler_logo_rgb(gamma);
 }, false);
 
 /*
@@ -101,5 +102,10 @@ function device_orientation_handler_logo_b(gamma) {
     logo_b.style.left = gamma + "px";
 }
 
+function device_orientation_handler_logo_rgb(gamma) {
+    logo_r.style.left = gamma * .2 + "px";
+    logo_g.style.left = gamma * .1 + "px";
+    logo_b.style.left = gamma * .05 + "px";
+}
 
 
