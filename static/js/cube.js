@@ -46,6 +46,7 @@ if (thiscontrol = document.getElementById('control')) {
     }, false);
 }
 
+/*
 window.addEventListener("touchstart", function(e) {        
     touchx = e.touches[0].clientX;                                      
 }, false);
@@ -61,6 +62,7 @@ window.addEventListener("touchmove", function(e) {
     document.getElementById('cube').style.transform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
     touchx = null;
 }, true);
+*/
 
 // display
 

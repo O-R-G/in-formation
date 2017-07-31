@@ -1,7 +1,7 @@
 // event listener (logo)
 
-var ica = document.getElementById('ica');
-ica.addEventListener("click", function(e) {
+var logo = document.getElementById('logo');
+logo.addEventListener("click", function(e) {
 
     var menu = document.getElementById('menu');
     var docket = document.getElementById('docket');

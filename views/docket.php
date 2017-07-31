@@ -53,7 +53,7 @@ $media = $oo->media($uu->id);
                         ?><p class="item"><?
                             // $date = date('l d/m', strtotime($date) );
                             $date = date('d/m h:i A', strtotime($date) );
-                            ?><span class="date mono <? echo $color; ?>"><? echo $date; ?></span><?
+                            ?><span class="date mono"><? echo $date; ?></span><?
                             ?><span class="location"><? echo $location; ?></span><?
                             ?><span class="title"><a href="<? echo "shows/" . $url; ?>" class="<? echo $color; ?>"><? echo $title; ?></a></span><?
                             ?><span class="description"><? echo $description; ?></span><?

@@ -79,56 +79,6 @@ ul:first-child {
     line-height: 48px;
 }
 
-#ica {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-family: "Helvetica";
-    font-size: 48px;
-    width: 140px;
-    z-index: 1000;
-    /*
-mix-blend-mode: normal;
-mix-blend-mode: multiply;
-mix-blend-mode: screen;
-mix-blend-mode: overlay;
-mix-blend-mode: darken;
-mix-blend-mode: lighten;
-mix-blend-mode: color-dodge;
-mix-blend-mode: color-burn;
-mix-blend-mode: hard-light;
-mix-blend-mode: soft-light;
-mix-blend-mode: difference;
-mix-blend-mode: exclusion;
-mix-blend-mode: hue;
-mix-blend-mode: saturation;
-mix-blend-mode: color;
-mix-blend-mode: luminosity;
-    */
-mix-blend-mode: screen;
-}
-
-#ica .r {
-    position: fixed;
-    bottom: 20px;
-    right: 14px;
-    width: 140px;
-}
-
-#ica .g {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 140px;
-}
-
-#ica .b {
-    position: fixed;
-    bottom: 20px;
-    right: 26px;
-    width: 140px;
-}
-
 #docket {
 	margin: 10px;
     padding-bottom: 100px;
@@ -154,8 +104,12 @@ mix-blend-mode: screen;
 
 #menu {
     display: none;
+    height: 100%;
     padding-left: 100px;
     padding-right: 100px;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
 }
 
 #fullscreen:-webkit-full-screen {
@@ -190,7 +144,7 @@ mix-blend-mode: screen;
 }
 
 .sans {
-    font-family: 'GrotesqueMT-Bold', 'HelveticaNeue-Bold', sans-serif;
+    font-family: 'GrotesqueMT', 'HelveticaNeue-Bold', sans-serif;
 	font-size: 15px;
 }
 

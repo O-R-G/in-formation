@@ -17,15 +17,19 @@ $nav = $oo->nav($uu->ids);
         $prevd = $nav[0]['depth'];                
         foreach($nav as $n) {    
             $d = $n['depth'];
+            /*
             if($d > $prevd) {
                 ?><ul class="menu-column"><?
             }
+            */
                 ?><li><?
                     ?><a href="<? echo $n['url']; ?>" class="menu-item"><? echo $n['o']['name1']; ?></a>
                 </li><?
+            /*
             if($d > $prevd) {
                 ?></ul><?
             }
+            */
             $prevd = $d;
         }
     ?></ul>

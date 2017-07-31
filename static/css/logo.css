@@ -4,14 +4,16 @@
 
 body {
      /* background-color: #000; */
+     /* background-color: #FFF; */
 }
 
 #logo {       
-    position: relative;
-    top: 200px;
-    left: 25%;
-    width: 100%;
+    position: fixed;
+    bottom: 100px;
+    right: -140px;
+    width: 350px;
     text-align: center;
+    z-index: 1000;
 }
 
 #logo div {
@@ -38,34 +40,13 @@ body {
     width: 50%;
 }
 
-/*
-#logo #logo-r {
-    left: -10px;
-}
-
-#logo #logo-g {
-    left: 0px;
-}
-
-#logo #logo-b {
-    left: 10px;
-}
-*/
-
 #logo-r {
-    left: -10px;
 }
 
 #logo-g {
-    left: 0px;
 }
 
 #logo-b {
-    left: 10px;
-}
-
-#in-formation {
-    /* display: none; */
 }
 
 /* class */

@@ -33,7 +33,8 @@ x cube offset geometry
 x rotate on center axis? make another url like /axis to try it
 + add images to docket
 + add touch event (swipe left, right) to cube
-- add menu clickhandler and display
++ add menu clickhandler and display
++ menu.php
++ /logo isolate blending
+- show full menu debug, depth traverse nav debug
 - add in formation contents
-- /logo isolate blending
-- menu.php
