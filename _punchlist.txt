@@ -36,5 +36,11 @@ x rotate on center axis? make another url like /axis to try it
 + add menu clickhandler and display
 + menu.php
 + /logo isolate blending
-- show full menu debug, depth traverse nav debug
++ show full menu debug, depth traverse nav debug
+- add screenfull to images (see all-collected...)
+- separate menu.css
+- add rgb hamburger menu on docket, switches to logo on menu
+- css debug menu mobile
+- arrow to menus?
+- swap in "Institute of ..." on click
 - add in formation contents

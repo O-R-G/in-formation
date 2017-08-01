@@ -14,6 +14,7 @@ $ww = new Wires();
 $uu = new URL();
 $nav = $oo->nav($uu->ids);
 $title = "in-formation";
+$date = date("d/m/Y");
 
 ?><!DOCTYPE html>
 <html>
@@ -32,8 +33,8 @@ $title = "in-formation";
 		<link rel="apple-touch-icon" href="/media/png/touchicon.png" />
 	</head>
 	<body>
-        <div id="in-formation">Institute of Contemporary Arts</div>
-        <!-- <div id="in-formation" class="">2017/07/31</div> -->
+        <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
+        <div id="in-formation" class=""><? echo $date; ?></div> 
         <!-- <div id="in-formation">In Formation</div> -->
         <!-- <div id="in-formation">Dev</div> -->
         <!-- <div id="in-formation">Exhibitions</div> -->

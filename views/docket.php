@@ -85,6 +85,7 @@ $media = $oo->media($uu->id);
 <!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
     
 <script src="static/js/cube.js"></script>
+<!-- <script src="/static/js/screenfull.js"></script> -->
 
 <!-- from serverdial.php 
 <script>
