@@ -1,6 +1,5 @@
 <?
 use \Michelf\Markdown;
-
 $o = $oo->get($uu->id);
 $body = Markdown::defaultTransform($o["body"]);
 $media = $oo->media($uu->id);

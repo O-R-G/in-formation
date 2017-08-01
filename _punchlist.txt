@@ -37,10 +37,14 @@ x rotate on center axis? make another url like /axis to try it
 + menu.php
 + /logo isolate blending
 + show full menu debug, depth traverse nav debug
-- add screenfull to images (see all-collected...)
-- separate menu.css
-- add rgb hamburger menu on docket, switches to logo on menu
++ separate menu.css
++ fix update date on click
++ swap in "Institute of ..." on click
++ add screenfull to images (see all-collected...)
+/ add rgb hamburger menu on docket, switches to logo on menu
+/ arrow to menus?
+/ add in formation contents
+x sql query for date ranges
++ php logic for date ranges
 - css debug menu mobile
-- arrow to menus?
-- swap in "Institute of ..." on click
-- add in formation contents
+- css selectors

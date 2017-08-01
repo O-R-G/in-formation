@@ -3,7 +3,72 @@
 /* id */
 
 #viewport {
-    text-align: center;
+    /* text-align: center; */
+}
+
+#docket {
+    display: block;
+    margin: 10px;
+    padding-bottom: 100px;
+}
+
+
+#docket .item {
+    padding: 10px;
+    color: #FFF;
+    /* border-bottom: 2px solid #FFF; */
+}
+
+#docket .item a {
+    color: #FFF;
+}
+
+/* work out css selectors! */
+.item .white {
+    padding: 10px;
+    color: #000;
+}
+
+#docket .red {
+    background-color: #F00;
+}
+
+#docket .green {
+    background-color: #0F0;
+}
+
+#docket .blue {
+    background-color: #00F;
+}
+
+#docket .white {
+    background-color: #FFF;
+}
+
+/*
+#docket .item {
+    padding: 10px;
+    color: #FFF;
+}
+
+#docket .item a {
+}
+
+#docket .red {
+    border-top: 1px solid #F00;
+}
+
+#docket .green {
+    border-top: 1px solid #0C0;
+}
+
+#docket .blue {
+    border-top: 1px solid #00F;
+}
+*/
+
+#docket .sub a {
+    background-color: transparent;
 }
 
 #cube {
@@ -13,8 +78,8 @@
 
 #cube div {
     display: inline-block;
-    width: 350px;
-    /* width: 33%; */
+    /* width: 350px; */
+    width: 25%;
     vertical-align: top;
     white-space: initial;
     text-align: initial;
@@ -67,7 +132,7 @@
 
 .face {
     position: relative;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 
@@ -96,6 +161,10 @@
         transform-style: preserve-3d;
     }
 
+    #cube div {  
+        width: 400px;
+    }
+
     #cube .f1 {
         transform: translateZ(200px);
     }
@@ -108,12 +177,16 @@
         transform: rotateY(-90deg) translateZ(200px);
     }
 
+    #cube .f4 {
+        transform: rotateY(-180deg) translateZ(200px);
+    }
+
     .face {
         position: absolute;
-        width: 350px;
+        /* width: 350px; */
         height: 800px;
         padding: 20px;
-        background-color: #FFF;
+        background-color: #CCC;
     }
 
     #in-formation {

@@ -22,13 +22,14 @@ body {
 	font-size: 16px;
 	line-height: 20px;
  
-    background-color: #FFF;
+    background-color: #CCC;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;
 }
 
 p {
 	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 img {
@@ -79,12 +80,6 @@ ul:first-child {
     line-height: 48px;
 }
 
-#docket {
-    display: block;
-	margin: 10px;
-    padding-bottom: 100px;
-}
-
 #clock-canvas {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -101,17 +96,6 @@ ul:first-child {
 #breadcrumbs {
 	padding: 20px;
 	padding-bottom: 0px;
-}
-
-#menu {
-    display: none;
-    height: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 #fullscreen:-webkit-full-screen {
@@ -174,19 +158,13 @@ ul:first-child {
 .item {
 }
 
-.menu-column {
-    display: inline-block;
-    width: 200px;
-    margin: 1em;
-    vertical-align: top;
-    text-align: initial;
-}
-
-.menu-item {
-}
-
 .date {
     display: inline-block;
+}
+
+.time {
+    display: inline-block;
+    float: right;
 }
 
 .location {
@@ -231,11 +209,15 @@ ul:first-child {
 }
 
 .green {
-    color: #0F0;
+    color: #0A0;
 }
 
 .blue {
     color: #00F;
+}
+
+.white {
+    color: #FFF;
 }
 
 a.red {
@@ -243,18 +225,15 @@ a.red {
 }
 
 a.green {
-    color: #0F0;
+    color: #0A0;
 }
 
 a.blue {
     color: #00F;
 }
 
-a.buynow {
-    color:#FFFFFF;
-    background-color:#0000ff;
-    padding-left: 2px;
-    padding-right: 10px;
+a.white {
+    color: #FFF;
 }
 
 /*
@@ -265,7 +244,7 @@ a.red:hover {
 
 a.green:hover {
     color: #FFF;
-    background-color: #0F0;
+    background-color: #0A0;
 }
 
 a.blue:hover {
