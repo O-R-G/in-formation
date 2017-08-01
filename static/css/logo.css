@@ -9,9 +9,9 @@ body {
 
 #logo {       
     position: fixed;
-    bottom: 100px;
-    right: -140px;
-    width: 350px;
+    bottom: 70px;
+    right: -110px;
+    width: 230px;
     text-align: center;
     z-index: 1000;
 }

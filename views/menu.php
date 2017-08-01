@@ -6,34 +6,36 @@ $body = Markdown::defaultTransform($o["body"]);
 $media = $oo->media($uu->id);
 ?>
 
-<?
-$nav = $oo->nav($uu->ids);
-?>
-
 <!-- menu -->
 
 <div id="menu" class="sans">
-    <ul class="menu-column"><?
+
+
+<?
+// hard-coded ids
+$id_root = 16;
+$ids_to_nav = [17,24,25,26];
+
+foreach ($ids_to_nav as $id_nav) {
+
+    // update $nav for next menu cluster
+
+    $ids_nav = [$id_root, $id_nav];
+    $nav = $oo->nav($ids_nav, $id_nav);
+
+    // output html
+
+    ?><ul class="menu-column"><?
         $prevd = $nav[0]['depth'];                
-        foreach($nav as $n) {    
+        foreach($nav as $n) {
             $d = $n['depth'];
-            /*
-            if($d > $prevd) {
-                ?><ul class="menu-column"><?
-            }
-            */
                 ?><li><?
                     ?><a href="<? echo $n['url']; ?>" class="menu-item"><? echo $n['o']['name1']; ?></a>
                 </li><?
-            /*
-            if($d > $prevd) {
-                ?></ul><?
-            }
-            */
             $prevd = $d;
         }
-    ?></ul>
-</div>
-
+    ?></ul><?
+}
+?></div>
 
 

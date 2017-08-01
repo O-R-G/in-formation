@@ -22,7 +22,7 @@ body {
 	font-size: 16px;
 	line-height: 20px;
  
-    background-color: #CCC;
+    background-color: #FFF;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -65,7 +65,7 @@ ul {
 }
 
 ul:first-child {
-	padding-left: 0px;
+  	/* padding-left: 0px; */
 }
 
 
@@ -80,6 +80,7 @@ ul:first-child {
 }
 
 #docket {
+    display: none;
 	margin: 10px;
     padding-bottom: 100px;
 }
@@ -103,13 +104,14 @@ ul:first-child {
 }
 
 #menu {
-    display: none;
+    display: display;
     height: 100%;
     padding-left: 100px;
     padding-right: 100px;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 30px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 #fullscreen:-webkit-full-screen {
@@ -173,7 +175,12 @@ ul:first-child {
 }
 
 .menu-column {
-    padding: 50px;
+    display: inline-block;
+    width: 200px;
+    padding: 0px;
+    margin: 1em;
+    vertical-align: top;
+    /* text-align: initial; */
 }
 
 .menu-item {
@@ -225,7 +232,7 @@ ul:first-child {
 }
 
 .green {
-    color: #0C0;
+    color: #0F0;
 }
 
 .blue {
@@ -237,7 +244,7 @@ a.red {
 }
 
 a.green {
-    color: #0C0;
+    color: #0F0;
 }
 
 a.blue {
@@ -259,7 +266,7 @@ a.red:hover {
 
 a.green:hover {
     color: #FFF;
-    background-color: #0C0;
+    background-color: #0F0;
 }
 
 a.blue:hover {

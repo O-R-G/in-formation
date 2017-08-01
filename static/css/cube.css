@@ -113,11 +113,11 @@
         width: 350px;
         height: 800px;
         padding: 20px;
-        background-color: #CCC;
+        background-color: #FFF;
     }
 
     #in-formation {
-        display: none;
+        /* display: none; */
     }
 }
 

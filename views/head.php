@@ -12,7 +12,6 @@ $oo = new Objects();
 $mm = new Media();
 $ww = new Wires();
 $uu = new URL();
-
 $nav = $oo->nav($uu->ids);
 $title = "in-formation";
 
@@ -25,15 +24,16 @@ $title = "in-formation";
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="in-formation">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon" href="media/png/apple-touch-icon.png" />
-        <link rel="stylesheet" href="static/css/main.css">
-        <link rel="stylesheet" href="static/css/cube.css">
-        <link rel="stylesheet" href="static/css/logo.css">
-        <link rel="stylesheet" href="static/fonts/cmun-serif/cmun-serif.css">
+        <link rel="apple-touch-icon" href="/media/png/apple-touch-icon.png" />
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/cube.css">
+        <link rel="stylesheet" href="/static/css/logo.css">
+        <link rel="stylesheet" href="/static/fonts/cmun-serif/cmun-serif.css">
 		<link rel="apple-touch-icon" href="/media/png/touchicon.png" />
 	</head>
 	<body>
         <div id="in-formation">Institute of Contemporary Arts</div>
+        <!-- <div id="in-formation" class="">2017/07/31</div> -->
         <!-- <div id="in-formation">In Formation</div> -->
         <!-- <div id="in-formation">Dev</div> -->
         <!-- <div id="in-formation">Exhibitions</div> -->
