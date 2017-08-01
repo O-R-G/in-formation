@@ -47,5 +47,9 @@ x rotate on center axis? make another url like /axis to try it
 x sql query for date ranges
 + php logic for date ranges
 - css debug menu mobile
-- css selectors
+- css selectors debug
+- mixing of categories in ladder (build array sorted by date)
+
+
 ** working in branch temp, which should be merged with master **
+** and maybe retain two branches with diff css for colorful and not **
