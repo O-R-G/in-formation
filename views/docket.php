@@ -140,14 +140,12 @@ $media = $oo->media($uu->id);
 </div>
    
 <div id="controls">
-    <button id="control">
-        rotate
-    </div>
-    <!-- 
-    <button id="control2">
+    <button id="control-cube" class="control">
+        cube
+    </button>
+    <button id="control-ladder" class="control">
         ladder
-    </div>
-    -->
+    </button>
 </div>
 
 <!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
