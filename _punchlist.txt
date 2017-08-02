@@ -54,6 +54,9 @@ x sql query for date ranges
 + ladder display control
 + img css debug
 - css fontsquirrel grotesque, ocrb
+- exhibitions page
+- exhibition page
+- feeds
 - web app manifest, caching, status bar 
 - git branches background and no background
 
