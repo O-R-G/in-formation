@@ -51,6 +51,7 @@ x sql query for date ranges
 + add rotate buttons mobile
 - ladder mixing categories (build array sorted by date) (docket.php) (usort)
 - css fontsquirrel grotesque, ocrb
-
+- web app manifest, caching, status bar 
+- git branches background and no background
 ** working in branch temp, which should be merged with master **
 ** and maybe retain two branches with diff css for colorful and not **

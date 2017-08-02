@@ -96,6 +96,7 @@
 }
 
 #controls {
+    display: none;   
     position: fixed;
     bottom: 10px;
     left: 10px;
@@ -184,14 +185,16 @@
         padding: 0px;
         height: 2000px;
         background-color: #CCC;
-        opacity: 0.99;
     }
 
     #in-formation {
         display: none;
     }
-}
 
+    #controls {
+        display: block;   
+    }
+}
 
 
 /* animation */
