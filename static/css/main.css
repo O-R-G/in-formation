@@ -21,8 +21,9 @@ body {
 
 	font-size: 16px;
 	line-height: 20px;
- 
+
     background-color: #CCC;
+    /* background-image: url('/media/png/hollows-small-light.png'); */
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;
 }
@@ -195,7 +196,6 @@ ul:first-child {
 }
 
 .img-container {
-    padding: 0 12% 1em 0;
 }
 
 .column-container-container {

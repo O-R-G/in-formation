@@ -52,7 +52,7 @@ x sql query for date ranges
 + ladder mixing categories (build array sorted by date) (docket.php) (usort)
 + ladder css cleanup
 + ladder display control
-- img css debug
++ img css debug
 - css fontsquirrel grotesque, ocrb
 - web app manifest, caching, status bar 
 - git branches background and no background
