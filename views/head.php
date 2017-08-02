@@ -16,7 +16,7 @@ $nav = $oo->nav($uu->ids);
 $title = "in-formation";
 // $date = date("l d/m/Y");
 // $date = date("l d/m –");
-$date = date("l, F j –");
+$date = date("l, F j");
 // $date = date("d/m/Y");
 ?><script>
     var date = "<? echo $date; ?>";
@@ -37,8 +37,9 @@ $date = date("l, F j –");
         <link rel="stylesheet" href="<? echo $host; ?>/static/css/menu.css">
         <link rel="stylesheet" href="<? echo $host; ?>/static/css/logo.css">
         <link rel="stylesheet" href="<? echo $host; ?>/static/fonts/cmun-serif/cmun-serif.css">
+        <link rel="stylesheet" href="<? echo $host; ?>/static/fonts/ocrb/ocrb.css">
+        <link rel="stylesheet" href="<? echo $host; ?>/static/fonts/grotesque_mt/grotesque_mt.css">
 		<link rel="apple-touch-icon" href="<? echo $host; ?>/media/png/touchicon.png" />
 	</head>
 	<body>
-        <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
-        <div id="in-formation" class=""><? echo $date; ?></div> 
+

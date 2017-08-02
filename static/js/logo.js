@@ -27,8 +27,8 @@ window.addEventListener("deviceorientation", function(e) {
     // device_orientation_handler_logo_r(alpha);
     // device_orientation_handler_logo_g(beta);
     // device_orientation_handler_logo_b(gamma);
-    // device_orientation_handler_logo_rgb(gamma);
-    device_orientation_handler_logo_rgb_xy(gamma, beta);
+    device_orientation_handler_logo_rgb(gamma);
+    // device_orientation_handler_logo_rgb_xy(gamma, beta);
     // device_orientation_handler_logo_rgb_xy(0, beta);
 }, false);
 

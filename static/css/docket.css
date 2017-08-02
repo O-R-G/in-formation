@@ -188,7 +188,7 @@
     }
 
     #cube .sub {
-        display: block;
+        display: none;
     }
 
     #cube .f1 {

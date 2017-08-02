@@ -148,12 +148,8 @@ else                            $showall = true;
 </div>
    
 <div id="controls">
-    <button id="control-cube" class="control">
-        cube
-    </button>
-    <button id="control-ladder" class="control">
-        ladder
-    </button>
+    <div id="control-cube" class="control"></div>
+    <div id="control-ladder" class="control"></div>
 </div>
 
 <!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->

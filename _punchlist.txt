@@ -54,13 +54,13 @@ x sql query for date ranges
 + img css debug
 x feeds
 / add rgb hamburger menu on docket, switches to logo on menu
-- css fontsquirrel grotesque, ocrb
-- isolate lanes
-- exhibition page
-- exhibitions page
++ css fontsquirrel grotesque, ocrb
++ isolate lanes
++ exhibitions page
++ logo demo with lighter colors
+- exhibition detail page
 - web app manifest, caching, status bar 
 - git branches background and no background
-- logo demo with lighter colors
 
 ** working in branch temp, which should be merged with master **
 ** and maybe retain two branches with diff css for colorful and not **

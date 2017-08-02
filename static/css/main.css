@@ -23,6 +23,7 @@ body {
 	line-height: 20px;
 
     background-color: #CCC;
+    /* background-color: #FFF; */
     /* background-image: url('/media/png/hollows-small-light.png'); */
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -82,6 +83,14 @@ ul:first-child {
     font-size: 48px;
     line-height: 48px;
     text-align: center;
+}
+
+#social {
+    position: absolute;
+    top:5000px;
+    width: 50%;
+    padding: 20px;
+    opacity: 0.75;
 }
 
 #clock-canvas {
