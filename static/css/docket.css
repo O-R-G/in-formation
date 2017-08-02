@@ -74,6 +74,7 @@
 }
 
 #cube {
+    display: block;
     position: relative;
     white-space: nowrap;
 }
@@ -93,6 +94,20 @@
 }
 
 #cube .f3 {
+}
+
+#ladder {
+    display: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+#ladder .head {
+    text-align: center;   
+}
+
+#ladder .sub {
+    width: initial;
 }
 
 #controls {
@@ -154,6 +169,7 @@
     }
 
     #cube {  
+        display: none;
         text-align: left;
         transition: transform 0.25s;
         transform-style: preserve-3d;
@@ -177,6 +193,17 @@
 
     #cube .f4 {
         transform: rotateY(-180deg) translateZ(200px);
+    }
+
+    #ladder {
+        display: block;        
+        text-align: left;
+        transition: transform 0.25s;
+        transform-style: preserve-3d;
+    }
+
+    #ladder .sub {
+        display: none;
     }
 
     .face {
