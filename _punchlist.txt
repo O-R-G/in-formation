@@ -41,8 +41,7 @@ x rotate on center axis? make another url like /axis to try it
 + fix update date on click
 + swap in "Institute of ..." on click
 + add screenfull to images (see all-collected...)
-/ add rgb hamburger menu on docket, switches to logo on menu
-/ arrow to menus?
+x menu arrow?
 / add in formation contents
 x sql query for date ranges
 + php logic for date ranges
@@ -53,12 +52,15 @@ x sql query for date ranges
 + ladder css cleanup
 + ladder display control
 + img css debug
+x feeds
+/ add rgb hamburger menu on docket, switches to logo on menu
 - css fontsquirrel grotesque, ocrb
-- exhibitions page
+- isolate lanes
 - exhibition page
-- feeds
+- exhibitions page
 - web app manifest, caching, status bar 
 - git branches background and no background
+- logo demo with lighter colors
 
 ** working in branch temp, which should be merged with master **
 ** and maybe retain two branches with diff css for colorful and not **

@@ -4,6 +4,12 @@ use \Michelf\Markdown;
 $o = $oo->get($uu->id);
 $body = Markdown::defaultTransform($o["body"]);
 $media = $oo->media($uu->id);
+$url = $o['url'];
+if ($url == 'exhibitions')      $show = 0;
+else if ($url == 'live')        $show = 1;
+else if ($url == 'films')       $show = 2;
+else if ($url == 'feed')        $show = 3;
+else                            $showall = true;
 ?>
 
 <!-- docket -->
@@ -26,7 +32,7 @@ $media = $oo->media($uu->id);
             if ($count == 1) $color = "green";
             if ($count == 2) $color = "blue";
             if ($count == 3) $color = "white";
-            $html = "<div class='sub'><a href='" . $url . "' class='" . $color . "'>" . $name . "</a></div>"; 
+            $html = "<div class='sub sans'><a href='now/" . $url . "' class='" . $color . "'>" . $name . "</a></div>"; 
             array_push($category, $html);
             $count++;
         }
@@ -64,8 +70,8 @@ $media = $oo->media($uu->id);
             if ($ladder) $color = $child['color'];
     
             $date_this = new DateTime($date_time);
-            $date_display_begin = new DateTime('2017-07-01');
-            $date_display_end = new DateTime('2017-08-03');
+            $date_display_begin = new DateTime('2017-07-15');
+            $date_display_end = new DateTime('2017-08-08');
             $date_in_range = (($date_this > $date_display_begin) && ($date_this < $date_display_end));
             
             if ($date_in_range) {
@@ -128,8 +134,10 @@ $media = $oo->media($uu->id);
 
                     $ladder = false;
                     usort($children, 'date_compare');
-                    foreach($children as $child) {
-                        display_child($oo, $child, $color, $ladder);
+                    if (($count == $show) || ($showall)) {
+                        foreach($children as $child) {
+                            display_child($oo, $child, $color, $ladder);
+                        }
                     }
                     $count++;
                 ?></div><?
@@ -150,8 +158,8 @@ $media = $oo->media($uu->id);
 
 <!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
 
-<script src="static/js/cube.js"></script>
-<script src="/static/js/screenfull.js"></script>
+<script src="<? echo $host; ?>/static/js/cube.js"></script>
+<script src="<? echo $host; ?>/static/js/screenfull.js"></script>
 <script>
     var imgs = document.getElementsByClassName('fullscreen');
     var i;

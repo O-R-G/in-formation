@@ -73,11 +73,15 @@ ul:first-child {
 /* ids */
 
 #in-formation {
-    margin-top: 40px;   
-    margin-bottom: 20px;   
-    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 60px;   
+    margin-bottom: 40px;   
     font-size: 48px;
     line-height: 48px;
+    text-align: center;
 }
 
 #clock-canvas {
@@ -216,7 +220,7 @@ ul:first-child {
 }
 
 .green {
-    color: #0A0;
+    color: #0C0;
 }
 
 .blue {
@@ -232,7 +236,7 @@ a.red {
 }
 
 a.green {
-    color: #0A0;
+    color: #0F0;
 }
 
 a.blue {
@@ -251,7 +255,7 @@ a.red:hover {
 
 a.green:hover {
     color: #FFF;
-    background-color: #0A0;
+    background-color: #0C0;
 }
 
 a.blue:hover {

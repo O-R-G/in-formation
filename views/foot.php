@@ -1,3 +1,3 @@
-    <script src="static/js/menu.js"></script>
+    <script src="<? echo $host; ?>/static/js/menu.js"></script>
 	</body>
 </html>
