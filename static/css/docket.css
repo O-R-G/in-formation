@@ -10,7 +10,8 @@
     display: block;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 60px;
+    margin-top: 120px;
+    /* margin-top: 280px; */
     padding-bottom: 100px;
 }
 
@@ -112,17 +113,24 @@
 #controls {
     /* display: none; */
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    top: 10px;
+    width: 100%;
     padding: 5px;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
+    opacity: 0.01;
 }
 
 #control-cube {
+    position: absolute;
+    left: 10px;
+    width: 45%;
 }
 
 #control-ladder {
+    position: absolute;
+    right: 10px;
+    width: 45%;
 }
 
 
@@ -173,14 +181,14 @@
     }
 
     #cube {
-        display: none;
+        display: block;
         text-align: left;
         transition: transform 0.25s;
         transform-style: preserve-3d;
     }
 
     #cube .sub {
-        display: none;
+        display: block;
     }
 
     #cube .f1 {
@@ -200,7 +208,7 @@
     }
 
     #ladder {
-        display: block;        
+        display: none;        
         text-align: left;
     }
 

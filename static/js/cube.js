@@ -24,13 +24,13 @@ window.addEventListener("deviceorientation", function(e) {
 document.addEventListener('keydown', function(e) {
   switch(e.keyCode) {
     case 37: // left
-      y_angle -= 90;
+      y_angle += 90;
       break;
     case 38: // up
       x_angle += 90;
       break;
     case 39: // right
-      y_angle += 90;
+      y_angle -= 90;
       break;
     case 40: // down
       x_angle -= 90;
