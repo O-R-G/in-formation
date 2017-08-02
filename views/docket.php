@@ -65,7 +65,7 @@ $media = $oo->media($uu->id);
     
             $date_this = new DateTime($date_time);
             $date_display_begin = new DateTime('2017-07-01');
-            $date_display_end = new DateTime('2017-08-06');
+            $date_display_end = new DateTime('2017-08-03');
             $date_in_range = (($date_this > $date_display_begin) && ($date_this < $date_display_end));
             
             if ($date_in_range) {
