@@ -72,11 +72,11 @@ print_r($uu->id);
                         if ($date_in_range) {
 
                             ?><p class="item <? echo $color; ?>"><?
-                                ?><span class="date mono"><? echo $date; ?></span><?
+                                ?><span class="date"><? echo $date; ?></span><?
                                 ?><!-- <span class="location"><? echo $location; ?></span> --><?
-                                ?><span class="time mono"><? echo $time; ?></span><?
-                                ?><span class="title sans"><a href="<? echo "shows/" . $url; ?>"><? echo $title; ?></a></span><?
-                                ?><span class="description sans"><? echo $description; ?></span><?
+                                ?><span class="time"><? echo $time; ?></span><?
+                                ?><span class="title"><a href="<? echo "shows/" . $url; ?>"><? echo $title; ?></a></span><?
+                                ?><span class="description"><? echo $description; ?></span><?
                             ?></p><?
                 
                             if (($media) && ($media[0][type] == 'gif')) {
@@ -95,13 +95,11 @@ print_r($uu->id);
 
 </div>
    
-<!-- 
 <div id="controls">
     <button id="control">
         rotate
     </div>
 </div>
--->
 
 <!-- work out best practice for this ... add doument onload? init()? self-invoking function? -->
 

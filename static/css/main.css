@@ -69,7 +69,6 @@ ul:first-child {
   	/* padding-left: 0px; */
 }
 
-
 /* ids */
 
 #in-formation {
@@ -160,11 +159,15 @@ ul:first-child {
 
 .date {
     display: inline-block;
+    font-family: 'OCRB', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 13px;
 }
 
 .time {
     display: inline-block;
     float: right;
+    font-family: 'OCRB', 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 13px;
 }
 
 .location {
@@ -176,10 +179,14 @@ ul:first-child {
 .title {
     display: block;
     text-transform: uppercase;
+    font-family: 'GrotesqueMT-Bold', 'HelveticaNeue-Bold', sans-serif;
+    font-size: 15px;
 }
 
 .description {
     display: block;
+    font-family: 'GrotesqueMT-Bold', 'HelveticaNeue-Bold', sans-serif;
+    font-size: 15px;
 }
 
 .fullscreen {

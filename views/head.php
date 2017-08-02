@@ -39,9 +39,3 @@ $date = date("l d/m/Y");
 	<body>
         <!-- <div id="in-formation">Institute of Contemporary Arts</div> -->
         <div id="in-formation" class=""><? echo $date; ?></div> 
-        <!-- <div id="in-formation">In Formation</div> -->
-        <!-- <div id="in-formation">Dev</div> -->
-        <!-- <div id="in-formation">Exhibitions</div> -->
-        <!-- <div id="in-formation" class='red'>Films</div> -->
-        <!-- <div id="in-formation" class='green'>Exhibitions</div> -->
-        <!-- <div id="in-formation" class='blue'>Live</div> -->

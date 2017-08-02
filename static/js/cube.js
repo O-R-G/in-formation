@@ -1,6 +1,6 @@
 // globals
 
-var xAngle = 0, yAngle = 0;
+var x_angle = 0, y_angle = 0;
 var cube = document.getElementById('cube');
 var alpha, beta, gamma;     // gyrscope x, y, z (z is like y on iphone, points straight up)
 var touchx;
@@ -23,26 +23,25 @@ window.addEventListener("deviceorientation", function(e) {
 document.addEventListener('keydown', function(e) {
   switch(e.keyCode) {
     case 37: // left
-      yAngle -= 90;
+      y_angle -= 90;
       break;
     case 38: // up
-      xAngle += 90;
+      x_angle += 90;
       break;
     case 39: // right
-      yAngle += 90;
+      y_angle += 90;
       break;
     case 40: // down
-      xAngle -= 90;
+      x_angle -= 90;
       break;
     };
-    document.getElementById('cube').style.transform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+    document.getElementById('cube').style.transform = "rotateX("+x_angle+"deg) rotateY("+y_angle+"deg)";
 }, false);
 
 if (thiscontrol = document.getElementById('control')) {
     thiscontrol.addEventListener('click', function() {
-        device_orientation_handler(500);
-        // yAngle += 90;
-        // document.getElementById('cube').style.webkitTransform = "rotateX("+xAngl$
+        y_angle += 90;
+        cube.style.transform = "rotateX("+x_angle+"deg) rotateY("+y_angle+"deg)";
     }, false);
 }
 
@@ -56,10 +55,10 @@ window.addEventListener("touchmove", function(e) {
     var touchx_up = e.touches[0].clientX;                                    
     var touchx_diff = touchx - touchx_up;
     if ( touchx_diff > 50 )
-        yAngle -= 90;
+        y_angle -= 90;
     else
-        yAngle += 90;
-    document.getElementById('cube').style.transform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+        y_angle += 90;
+    document.getElementById('cube').style.transform = "rotateX("+x_angle+"deg) rotateY("+y_angle+"deg)";
     touchx = null;
 }, true);
 */
@@ -82,10 +81,10 @@ function device_orientation_handler_xyz(alpha, beta, gamma) {
 
 function device_orientation_handler_limit(gamma) {
     if (gamma > 45) 
-        yAngle = 90;
+        y_angle = 90;
     else if (gamma < -45) 
-        yAngle = -90;
+        y_angle = -90;
     else 
-        yAngle = 0;
-    cube.style.transform = " rotateY("+ yAngle + "deg)";
+        y_angle = 0;
+    cube.style.transform = " rotateY("+ y_angle + "deg)";
 }

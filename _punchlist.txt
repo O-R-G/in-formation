@@ -46,10 +46,11 @@ x rotate on center axis? make another url like /axis to try it
 / add in formation contents
 x sql query for date ranges
 + php logic for date ranges
-- css debug menu mobile
-- css selectors debug
-- mixing of categories in ladder (build array sorted by date)
-
++ css selectors debug
++ css debug menu mobile
++ add rotate buttons mobile
+- ladder mixing categories (build array sorted by date) (docket.php) (usort)
+- css fontsquirrel grotesque, ocrb
 
 ** working in branch temp, which should be merged with master **
 ** and maybe retain two branches with diff css for colorful and not **
