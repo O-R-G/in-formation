@@ -4,18 +4,12 @@ use \Michelf\Markdown;
 $o = $oo->get($uu->id);
 $body = Markdown::defaultTransform($o["body"]);
 $media = $oo->media($uu->id);
-foreach ($uri as $url_part) {           
-    if ($url_part == 'exhibitions')
-        $show = 0;
-    else if ($url_part == 'live')
-        $show = 1;
-    else if ($url_part == 'films') 
-        $show = 2;
-    else if ($url_part == 'feed')
-        $show = 3;
-}
-if ($show === null)
-    $showall = true;
+$url = $o['url'];
+if ($url == 'exhibitions')      $show = 0;
+else if ($url == 'live')        $show = 1;
+else if ($url == 'films')       $show = 2;
+else if ($url == 'feed')        $show = 3;
+else                            $showall = true;
 ?>
 
 <!-- docket -->
@@ -26,7 +20,6 @@ if ($show === null)
         // 0. build category
     
         $category = array();
-        $category_name = array();
     
         $root = 15;     // docket id
         $children = $oo->children($root);
@@ -39,35 +32,15 @@ if ($show === null)
             if ($count == 1) $color = "green";
             if ($count == 2) $color = "blue";
             if ($count == 3) $color = "white";
-            $href = (!$showall) ? '/now' : '/now/' . $url;
-            $html = "<div class='sub sans'><a href='" . $href . "' class='" . $color . "'>" . $name . "</a></div>"; 
+            $html = "<div class='sub sans'><a href='now/" . $url . "' class='" . $color . "'>" . $name . "</a></div>"; 
             array_push($category, $html);
-            array_push($category_name, $name);
             $count++;
         }
         $count = 0;
-    
-        // 1. build children_combined
-    
-        $children_combined = array();
-    
-        foreach($roots as $root) {
-            $children = $oo->children($root);
-            if ($count == 0) $color = "red";
-            if ($count == 1) $color = "green";
-            if ($count == 2) $color = "blue";
-            if ($count == 3) $color = "white";
-            foreach($children as $child) {
-                $child['color'] = $color;
-                array_push($children_combined, $child);
-            }
-            $count++;
-        }
-        $count = 0;
-    
+        
         // 2. display child
     
-        function display_child($oo, $child, $color, $ladder, $showall, $category_name) {
+        function display_child($oo, $child, $color, $ladder) {
             $date_time =  $child["begin"];
             $date = date('d/m', strtotime($date_time));
             $time = date('h:i A', strtotime($date_time));
@@ -77,9 +50,7 @@ if ($show === null)
             $url = $child["url"];
             $media = $oo->media($child["id"]);
             if ($ladder) $color = $child['color'];
-            // $href = (!$showall) ? '/now/' . $category_name . '/' . $url : '/now/' . $url;
-            $href = '/now/' . $category_name . '/' . $url;
-
+    
             $date_this = new DateTime($date_time);
             $date_display_begin = new DateTime('2017-07-15');
             $date_display_end = new DateTime('2017-08-08');
@@ -89,7 +60,7 @@ if ($show === null)
                 ?><p class="item <? echo $color; ?>"><?
                     ?><span class="date"><? echo $date; ?></span><?
                     ?><span class="time"><? echo $time; ?></span><?
-                    ?><span class="title"><a href="<? echo $href; ?>"><? echo $title; ?></a></span><?
+                    ?><span class="title"><a href="<? echo 'now/' . $url; ?>"><? echo $title; ?></a></span><?
                     ?><span class="description"><? echo $description; ?></span><?
                 ?></p><?
     
@@ -114,25 +85,11 @@ if ($show === null)
 
         // 4. display
 
-        ?><!-- ladder -->
-
-        <div id="ladder"><?
-            ?><div class="face f1"><?
-
-                $ladder = true;    
-                usort($children_combined, 'date_compare');
-                foreach($children_combined as $child) {
-                    display_child($oo, $child, $color, $ladder, $showall, $category_name[$count]);
-                }
-
-            ?></div><?
-        ?></div><?
-
         ?><!-- cube -->
 
         <div id="cube"><?
 
-            foreach($roots as $root) {
+            foreach($roots as $root) {    
 
                 ?><div class="face f<? echo $count+1; ?>"><?
 
@@ -147,29 +104,15 @@ if ($show === null)
                     usort($children, 'date_compare');
                     if (($count == $show) || ($showall)) {
                         foreach($children as $child) {
-                            display_child($oo, $child, $color, $ladder, $showall, $category_name[$count]);
+                            display_child($oo, $child, $color, $ladder);
                         }
                     }
                     $count++;
                 ?></div><?
             }
         ?></div>
+    </div>
 
-        <!-- detail --><?
-
-        if (!$showall) {
-
-            ?><script>
-                $innerhtml = "<a href='/now/'><? echo ucfirst($category_name[$show]); ?></a>";
-                document.getElementById('in-formation').innerHTML = $innerhtml;
-            </script>
-
-            <div id="detail" class="sans"><?
-                echo nl2br($o['body']);    
-            ?></div><?
-        }
-
-    ?></div>
 </div>
    
 <div id="controls">
