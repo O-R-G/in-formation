@@ -159,6 +159,13 @@
     background-color: #666;
 }
 
+.floater {
+    position: absolute;
+    top: 50%;
+    padding: 100px;
+    left: 50%;
+    width: 50%;
+}
 
 /* mobile */
 
@@ -219,6 +226,15 @@
         padding: 0px;
         height: 2000px;
         background-color: #CCC;
+    }
+
+    .floater {
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        left: 0;
+        width: 100%;
+        padding-bottom: 50px;
     }
 
     #detail {
