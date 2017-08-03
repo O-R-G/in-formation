@@ -50,6 +50,15 @@ body {
 #logo-b {
 }
 
+#logo-hamburger {       
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    mix-blend-mode: initial;
+}
+
+
 /* class */
 
 

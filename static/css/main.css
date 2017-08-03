@@ -204,8 +204,6 @@ ul:first-child {
 
 .description {
     display: block;
-    font-family: 'grotesque_mtbold', 'HelveticaNeue-Bold', sans-serif;
-    font-size: 15px;
 }
 
 .fullscreen {
@@ -214,6 +212,7 @@ ul:first-child {
 }
 
 .img-container {
+    padding: 10px;
 }
 
 .column-container-container {

@@ -15,46 +15,19 @@
     padding-bottom: 100px;
 }
 
-/* background */
+/* no background */
 
 #docket .item {
     padding: 10px;
     color: #FFF;
 }
 
-#docket .item a {
-    color: #FFF;
-}
 
 #docket .red {
-    background-color: #F00;
+    color: #F00;
 }
 
-#docket .green {
-    background-color: #0F0;
-}
-
-#docket .blue {
-    background-color: #00F;
-}
-
-#docket .white {
-    color: #000;
-    background-color: #FFF;
-}
-
-/* no background 
-
-#docket .item {
-    padding: 10px;
-    color: #FFF;
-}
-
-#docket .item a {
-    color: #FFF;
-}
-
-#docket .red {
+#docket .red a {
     color: #F00;
 }
 
@@ -62,14 +35,25 @@
     color: #0C0;
 }
 
+#docket .green a {
+    color: #0C0;
+}
+
 #docket .blue {
+    color: #00F;
+}
+
+#docket .blue a {
     color: #00F;
 }
 
 #docket .white {
     color: #FFF;
 }
-*/
+
+#docket .white a {
+    color: #FFF;
+}
 
 #docket .sub a {
     background-color: transparent;
@@ -156,7 +140,7 @@
     vertical-align: top;
     white-space: initial;
     text-align: initial;
-    /* padding: 20px; */
+    padding: 20px;
 }
 
 .control {
@@ -175,6 +159,13 @@
     background-color: #666;
 }
 
+.floater {
+    position: absolute;
+    top: 45%;
+    padding: 100px;
+    left: 60%;
+    width: 450px;
+}
 
 /* mobile */
 
@@ -235,6 +226,15 @@
         padding: 0px;
         height: 2000px;
         background-color: #CCC;
+    }
+
+    .floater {
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        left: 0;
+        width: 100%;
+        padding-bottom: 50px;
     }
 
     #detail {

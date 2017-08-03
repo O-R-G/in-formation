@@ -165,7 +165,23 @@ if ($show === null)
             </script>
 
             <div id="detail" class="sans"><?
+
                 echo nl2br($o['body']);    
+
+            ?></div>
+
+            <div id="detail" class="sans"><?
+
+                $media = $oo->media($uu->id);
+                if ($media) {
+                    foreach ($media as $m) {
+                        ?><div class='img-container floater'><img src='<? echo m_url($m);?>' class='fullscreen'></div><?
+                        if ($m[caption]) {
+                            ?><div class='caption'><? echo $m[caption]; ?></div><?
+                        }
+                    }
+                }
+
             ?></div><?
         }
 
