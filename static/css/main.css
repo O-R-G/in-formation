@@ -85,6 +85,10 @@ ul:first-child {
     text-align: center;
 }
 
+#in-formation a {
+    color: #000;
+}
+
 #social {
     position: absolute;
     top:5000px;

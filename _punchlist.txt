@@ -58,8 +58,8 @@ x feeds
 + isolate lanes
 + exhibitions page
 + logo demo with lighter colors
-- exhibition detail page
-- web app manifest, caching, status bar 
+/ exhibition detail page
+x web app manifest, caching, status bar 
 - git branches background and no background
 
 ** working in branch temp, which should be merged with master **
