@@ -161,10 +161,10 @@
 
 .floater {
     position: absolute;
-    top: 50%;
+    top: 45%;
     padding: 100px;
-    left: 50%;
-    width: 50%;
+    left: 60%;
+    width: 450px;
 }
 
 /* mobile */
