@@ -60,7 +60,6 @@ x feeds
 + logo demo with lighter colors
 / exhibition detail page
 x web app manifest, caching, status bar 
-- git branches background and no background
+x git branches background and no background
+- penrose triangle as 3d 'cube'
 
-** working in branch temp, which should be merged with master **
-** and maybe retain two branches with diff css for colorful and not **

@@ -4,6 +4,8 @@ require_once("views/head.php");
 
 if ($uri[1] == 'i-c-a') {
     require_once("views/i-c-a.php");
+} else if ($uri[1] == 'triangle') {
+    require_once("views/triangle.php");
 } else {
     require_once("views/header.php");
     require_once("views/docket.php");
