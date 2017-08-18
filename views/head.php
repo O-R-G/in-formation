@@ -31,7 +31,7 @@ $date = date("l, F j");
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="in-formation">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon" href="<? echo $host; ?>/media/png/apple--touch-icon.png" />
+        <link rel="apple-touch-icon" href="<? echo $host; ?>/media/png/apple-touch-icon.png" />
         <link rel="stylesheet" href="<? echo $host; ?>/static/css/main.css">
         <link rel="stylesheet" href="<? echo $host; ?>/static/css/docket.css">
         <link rel="stylesheet" href="<? echo $host; ?>/static/css/menu.css">
