@@ -56,6 +56,9 @@ function device_orientation_handler_triangle_rgb(gamma) {
     triangle_r.style.left = gamma * .2 + "px";
     triangle_g.style.left = gamma * .1 + "px";
     triangle_b.style.left = gamma * .05 + "px";
+    triangle_r.style.transform = "rotateX("+gamma+"deg) rotateY("+beta+"deg)";
+    triangle_g.style.transform = "rotateX("+gamma+"deg) rotateY("+beta*.5+"deg)";
+    triangle_b.style.transform = "rotateX("+gamma+"deg) rotateY("+beta*.25+"deg)";
 }
 
 function rotate_handler_triangle_rgb(beta) {
